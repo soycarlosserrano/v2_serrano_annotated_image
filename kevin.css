@@ -1,0 +1,278 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    font-family: Molengo;
+    line-height: 1;
+}
+
+.byline {
+    margin: 10px;
+    padding: 10px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Start your base/mobile styles here */
+
+html, body {
+    font-size: 16px;
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+}
+
+.main-text, h1 {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+h1 {
+    color: #FF0000;
+    padding-bottom: 10px;
+    font-size: 2.9em;
+}
+
+.caption {
+    color: gray;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+.credit {
+    font-weight: 400;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    background-color: #FFFFFF;
+    border: solid #00C7D8;
+    opacity: .75;
+    z-index: 3;
+    display: block;
+}
+
+#circle_head {
+    /*background-color: purple;*/
+    position: absolute;
+    top: 0%;
+    /* Must be in percentage or will move on different devices*/
+    left: 45%;
+}
+
+#circle_hand {
+    /*background-color: purple;*/
+    position: absolute;
+    top: 44%;
+    /* Must be in percentage or will move on different devices*/
+    left: 60%;
+}
+
+#circle_heart {
+    position: absolute;
+    top: 22%;
+    /* Must be in percentage or will move on different devices*/
+    left: 53%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+#circle_pocket {
+    /*background-color: purple;*/
+    position: absolute;
+    top: 45%;
+    /* Must be in percentage or will move on different devices*/
+    left: 42%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+#circle_left_leg {
+    /*background-color: purple;*/
+    position: absolute;
+    top: 90%;
+    /* Must be in percentage or will move on different devices*/
+    left: 67%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+#circle_right_leg {
+    /*background-color: purple;*/
+    position: absolute;
+    top: 90%;
+    /* Must be in percentage or will move on different devices*/
+    left: 40%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+#circle_shoe {
+    /*background-color: purple;*/
+    position: absolute;
+    top: 82%;
+    /* Must be in percentage or will move on different devices*/
+    left: 78%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+#circle_knee {
+    /*background-color: purple;*/
+    position: absolute;
+    top: 29%;
+    /* Must be in percentage or will move on different devices*/
+    left: 66%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+#circle_muslo {
+    /*background-color: purple;*/
+    position: absolute;
+    top: 8%;
+    /* Must be in percentage or will move on different devices*/
+    left: 42%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+#circle_wheel {
+    /*background-color: purple;*/
+    position: absolute;
+    top: 55%;
+    /* Must be in percentage or will move on different devices*/
+    left: 10%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+#circle_video {
+    /*background-color: purple;*/
+    position: absolute;
+    top: 75%;
+    /* Must be in percentage or will move on different devices*/
+    left: 20%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+.photo-container {
+    width: 100%;
+    position: relative;
+    /*z-index: 1;*/
+}
+
+.info_slides {
+    width: 100%;
+    background-color: yellow;
+    opacity: .75;
+    display: none;
+    /*padding-top: 20px;*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+.info_slides_show {
+    display: block;
+}
+
+.hide_btn {
+    display: none;
+}
+
+.popIn-info {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    padding: 70px 15px 30px 15px;
+    font-size: 1.5em;
+    text-align: center;
+    color: brown;
+    height: 100%;
+    /*display: none;*/
+}
+
+.btn_close {
+    position: absolute;
+    font-family: sans-serif;
+    top: 5%;
+    left: 92%;
+    font-size: 2em;
+    color: #FFFFFF;
+    z-index: 4;
+    font-weight: 900;
+    display: none;
+}
+
+.btn_close_show {
+    display: block;
+}
+
+img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Tablet/Desktop overrides */
+
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+}
+
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+    .circle:hover {
+        background-color: purple;
+    }
+    .popIn-info {
+        font-size: 5em;
+        padding: 200px 15px 30px 15px;
+        /*display: none;*/
+    }
+    .btn_close {
+        font-size: 4em;
+    }
+    .btn_close:hover {
+        color: black;
+    }
+}
